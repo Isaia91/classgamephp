@@ -15,16 +15,22 @@ public function __construct($niveau, $nom) {
 		$this->ennemie = $mob;
 		if($mob->niveau > $this->niveau) {
 			echo "Tu es trop nul pour l'affronter".PHP_EOL;
+			die();
 		}
 		else{
-			$mob->pv =$mob->pv - $this->attaque;
-			$this->pv=$this->pv - $mob->attaque;
+			while ($mob->pv <= 0 || $this->pv <= 0) {
+				echo'dans le while';
+				$mob->pv =$mob->pv - $this->attaque;			
+				$mob->pv =$mob->pv - $this->attaque;
+				print_r($this->pv).PHP_EOL;	
+
+			}
 			if ($mob->pv <= 0) {
 				echo 'le joueur a gagné';
-			}elseif ($this->pv <= 0) {
-				echo 'le mob a gagné';
 			}
-		print_r($this->pv);	
+			elseif ($this->pv <= 0) {
+				echo 'le mob a gagné'; 
+			}
+		}
 		}
 	}
-}
