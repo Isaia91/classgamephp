@@ -1,0 +1,53 @@
+Niveau
+Experience
+Endurance
+Vie
+Attaque
+Force
+
+Pesonnage
+	classjoueur 
+	classmob
+
+Tout personnage peut prendre des couts et donc perdre des points de vies
+
+
+
+Le joueur
+	Lorsque que l'on creer un joueur on decide de son niveau
+		endurance =2x niveau
+		force=2x niveau
+		(enndurance = force)
+		nb point vie =5x endurance
+		attaque 2x la force
+
+Les Mob:
+	Quand il est creer, il va avoir un niveau
+		Il va avoir une endurance équivalentes a son niveau
+		UNe force equivalente a son endurance (niveau)
+		un nombre de points de vie 5x son endurance 
+		Attaque equivalente a 2x la force
+
+
+Abstaite personnage
+	Herité Joueur
+	Heirté Mob
+
+Class personnage 
+	Nom
+	Niveau
+	Experience
+	Endurance
+	Vie
+	Attaque
+	Force
+
+
+je veux mon peros niv2 
+	endurance = 2*niv
+	force = 2*niv
+	PV = 5*4
+	Attaque = 2*4
+
+
+
